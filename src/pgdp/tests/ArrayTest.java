@@ -9,6 +9,8 @@ import static pgdp.array.Array.intersect;
 import static pgdp.array.Array.linearize;
 import static pgdp.array.Array.bubbleSort;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 import org.junit.jupiter.api.Test;
 import org.testng.Assert;
 import pgdp.PinguLib;
@@ -22,12 +24,11 @@ public class ArrayTest {
 		int[] a = new int[] {};
 		print(a);
 		Assert.assertEquals("{}", getConsoleOutput());
-	}
-	@Test
-	void testPrintminmax() {
-		int[] b = new int[]{Integer.MAX_VALUE, Integer.MIN_VALUE};
+
+		int[] b = new int[] {Integer.MAX_VALUE, Integer.MIN_VALUE};
 		print(b);
 		Assert.assertEquals("{2147483647, " + "-2147483648}", getConsoleOutput());
 		PinguLib.reset();
 	}
+
 }
