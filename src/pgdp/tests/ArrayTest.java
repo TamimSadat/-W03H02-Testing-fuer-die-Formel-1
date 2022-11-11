@@ -1,14 +1,19 @@
 package pgdp.tests;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.fail;
 import static pgdp.PinguLib.getConsoleOutput;
 import static pgdp.array.Array.print;
 import static pgdp.array.Array.minAndMax;
 import static pgdp.array.Array.invert;
 import static pgdp.array.Array.intersect;
+import static pgdp.array.Array.linearize;
+import static pgdp.array.Array.bubbleSort;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.jupiter.api.Test;
 import pgdp.PinguLib;
+import pgdp.array.ArrayInterface;
 
 import java.util.Arrays;
 //import org.testng.annotations.Test;
@@ -57,15 +62,6 @@ public class ArrayTest {
 		PinguLib.reset();
 	}
 
-	@Test
-	void testIntersect() {
-		PinguLib.setup();
-		assertAll(
-				() -> intersect(new int[] {1, 2, 3, 4}, 2, new int[] {1, 2}),
-				() -> intersect(new int[] {1, Integer.MAX_VALUE, -5}, 5, new int[] {1, Integer.MAX_VALUE, -5, 0}),
-				() -> intersect(new int[] {1, 2, 3, 4}, -1, new int[] {})
-		);
-		PinguLib.reset();
-	}
+
 
 }

@@ -18,7 +18,7 @@ public class Array {
 		arrayImplementation.invert(a);
 	}
 
-	public static int[] intersect(int[] a, int length, int[] ints) {
+	public static int[] intersect(int[] a, int length) {
 		return arrayImplementation.intersect(a, length);
 	}
 
