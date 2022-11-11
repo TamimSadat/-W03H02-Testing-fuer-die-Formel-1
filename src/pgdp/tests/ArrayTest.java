@@ -30,4 +30,19 @@ public class ArrayTest {
 		PinguLib.reset();
 	}
 
+	@Test
+	void testMinAndMax() {
+		PinguLib.setup();
+		int[] a = new int[] {1, 2, -1, 3, Integer.MAX_VALUE};
+		minAndMax(a);
+		assertEquals("Minimum = " + "-1" + ", Maximum = " + "2147483647", getConsoleOutput());
+		int[] b = new int[] {};
+		minAndMax(b);
+		assertEquals("", getConsoleOutput());
+		PinguLib.reset();
+		int[] c = new int[] {Integer.MIN_VALUE};
+		minAndMax(c);
+		assertEquals("", getConsoleOutput());
+	}
+
 }
