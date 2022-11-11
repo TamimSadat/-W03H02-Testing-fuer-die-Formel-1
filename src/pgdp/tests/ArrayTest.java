@@ -13,6 +13,8 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.jupiter.api.Test;
 import pgdp.PinguLib;
+
+import java.util.Arrays;
 //import org.testng.annotations.Test;
 
 public class ArrayTest {
@@ -43,6 +45,20 @@ public class ArrayTest {
 		int[] c = new int[] {Integer.MIN_VALUE};
 		minAndMax(c);
 		assertEquals("", getConsoleOutput());
+	}
+
+	@Test
+	void testInvert() {
+		PinguLib.setup();
+		int[] a = new int[] {0, 1, Integer.MAX_VALUE, 2, 9, -1};
+		invert(a);
+		System.out.println(Arrays.toString(a));
+		assertEquals("[-1, 9, 2, 2147483647, 1, 0]", getConsoleOutput());
+		int[] b = new int[] {};
+		invert(b);
+		System.out.println(Arrays.toString(b));
+		assertEquals("[]", getConsoleOutput());
+		PinguLib.reset();
 	}
 
 }
