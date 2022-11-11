@@ -11,7 +11,7 @@ import static pgdp.array.Array.bubbleSort;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.jupiter.api.Test;
-import org.testng.Assert;
+//import org.testng.Assert;
 import pgdp.PinguLib;
 //import org.testng.annotations.Test;
 
@@ -22,14 +22,14 @@ public class ArrayTest {
 		PinguLib.setup();
 		int[] a = new int[] {};
 		print(a);
-		Assert.assertEquals("{}", getConsoleOutput());
+		assertEquals("{}", getConsoleOutput());
 	}
 
 	@Test
 	void testPrintNullMinMax() {
 		int[] b = new int[] {Integer.MAX_VALUE, Integer.MIN_VALUE};
 		print(b);
-		Assert.assertEquals("{2147483647, " + "-2147483648}", getConsoleOutput());
+		assertEquals("{2147483647, " + "-2147483648}", getConsoleOutput());
 		PinguLib.reset();
 	}
 
