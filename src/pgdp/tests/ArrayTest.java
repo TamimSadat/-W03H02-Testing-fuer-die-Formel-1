@@ -13,6 +13,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.jupiter.api.Test;
 import pgdp.PinguLib;
+import pgdp.array.ArrayInterface;
 
 import java.util.Arrays;
 //import org.testng.annotations.Test;
@@ -66,15 +67,15 @@ public class ArrayTest {
 		PinguLib.setup();
 		int[] a = new int[] {};
 		intersect(a, 2);
-		assertEquals("[0, 0]", getConsoleOutput());
+		assertEquals("", getConsoleOutput());
 
 		int[] b = new int[] {Integer.MAX_VALUE};
 		intersect(a, -1);
-		assertEquals("[]", getConsoleOutput());
+		assertEquals("", getConsoleOutput());
 
 		int[] c = new int[] {1, 2, 3, -1, 5, 6};
 		intersect(a, 5);
-		assertEquals("[1, 2, 3, -1]", getConsoleOutput());
+		assertEquals("", getConsoleOutput());
 		PinguLib.reset();
 	}
 
