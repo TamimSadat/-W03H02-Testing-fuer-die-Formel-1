@@ -8,10 +8,10 @@ import static pgdp.array.Array.invert;
 import static pgdp.array.Array.intersect;
 import static pgdp.array.Array.linearize;
 import static pgdp.array.Array.bubbleSort;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.jupiter.api.Test;
-//import org.testng.Assert;
 import pgdp.PinguLib;
 //import org.testng.annotations.Test;
 
@@ -23,25 +23,11 @@ public class ArrayTest {
 		int[] a = new int[] {};
 		print(a);
 		assertEquals("{}", getConsoleOutput());
-	}
 
-	@Test
-	void testPrintNullMinMax() {
 		int[] b = new int[] {Integer.MAX_VALUE, Integer.MIN_VALUE};
 		print(b);
 		assertEquals("{2147483647, " + "-2147483648}", getConsoleOutput());
 		PinguLib.reset();
-	}
-
-	@Test
-	void testMinAndMax() {
-		PinguLib.setup();
-		int[] a = new int[] {1, 2, 3};
-		minAndMax(a);
-		assertEquals("Minimum = " + "1" + ", Maximum = " + "3", getConsoleOutput());
-
-		PinguLib.reset();
-
 	}
 
 }
