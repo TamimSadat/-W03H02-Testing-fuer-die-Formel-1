@@ -8,10 +8,6 @@ import static pgdp.array.Array.invert;
 import static pgdp.array.Array.intersect;
 import static pgdp.array.Array.linearize;
 import static pgdp.array.Array.bubbleSort;
-
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import org.testng.Assert;
-
 import org.junit.jupiter.api.Test;
 import org.testng.Assert;
 import pgdp.PinguLib;
