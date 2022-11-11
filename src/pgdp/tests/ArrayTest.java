@@ -9,12 +9,13 @@ import static pgdp.array.Array.linearize;
 import static pgdp.array.Array.bubbleSort;
 
 import org.junit.jupiter.api.Test;
+//import org.testng.annotations.Test;
 
 public class ArrayTest {
 
 	@Test
 	void test() {
-		print(new int[] { 1, 2, 3 });
-		fail();
+		print(new int[] { 1, 9, 3 });
+		//fail("");
 	}
 }

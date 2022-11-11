@@ -1,5 +1,7 @@
 package pgdp.array;
 
+import java.util.Arrays;
+
 public interface ArrayInterface {
 
 	default void print(int[] a) {

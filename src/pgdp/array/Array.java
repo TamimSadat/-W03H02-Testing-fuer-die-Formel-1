@@ -6,6 +6,7 @@ public class Array {
 	};
 
 	public static void print(int[] a) {
+
 		arrayImplementation.print(a);
 	}
 
