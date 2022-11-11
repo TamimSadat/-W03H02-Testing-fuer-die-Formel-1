@@ -61,4 +61,21 @@ public class ArrayTest {
 		PinguLib.reset();
 	}
 
+	@Test
+	void testIntersect() {
+		PinguLib.setup();
+		int[] a = new int[] {};
+		intersect(a, 2);
+		assertEquals("[0, 0]", getConsoleOutput());
+
+		int[] b = new int[] {Integer.MAX_VALUE};
+		intersect(a, -1);
+		assertEquals("[]", getConsoleOutput());
+
+		int[] c = new int[] {1, 2, 3, -1, 5, 6};
+		intersect(a, 5);
+		assertEquals("[1, 2, 3, -1]", getConsoleOutput());
+		PinguLib.reset();
+	}
+
 }
