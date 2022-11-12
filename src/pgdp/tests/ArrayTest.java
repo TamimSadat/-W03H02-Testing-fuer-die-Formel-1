@@ -95,7 +95,26 @@ public class ArrayTest {
 		assertEquals("[-2147483648]", getConsoleOutput());
 
 		PinguLib.reset();
+	}
 
+	@Test
+	void testBubbleSort() {
+		PinguLib.setup();
+		int[] a = new int[] {1, Integer.MAX_VALUE, -3, 4, 1};
+		bubbleSort(a);
+		System.out.println(Arrays.toString(a));
+		assertEquals("[-3, 1, 1, 4, 2147483647]", getConsoleOutput());
+		int[] b = new int[] {};
+		bubbleSort(b);
+		System.out.println(Arrays.toString(b));
+		assertEquals("[]", getConsoleOutput());
+
+		int[] c = new int[] {Integer.MIN_VALUE, -4, -3, 0, -3, 2};
+		bubbleSort(c);
+		System.out.println(Arrays.toString(c));
+		assertEquals("[-2147483648, -4, -3, -3, 0, 2]", getConsoleOutput());
+
+		PinguLib.reset();
 	}
 
 
