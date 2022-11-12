@@ -79,5 +79,24 @@ public class ArrayTest {
 		PinguLib.reset();
 	}
 
+	@Test
+	void testLinearize() {
+		PinguLib.setup();
+		int[][] a = new int[][] {{-2}, {3, 4}, {5, 4}};
+		System.out.println(Arrays.toString(linearize(a)));
+		assertEquals("[-2, 3, 4, 5, 4]", getConsoleOutput());
+
+		int[][] b = new int[][] {{-2}, {}, {Integer.MAX_VALUE, 4}};
+		System.out.println(Arrays.toString(linearize(b)));
+		assertEquals("[-2, 2147483647, 4]", getConsoleOutput());
+
+		int[][] c = new int[][] {{Integer.MIN_VALUE}};
+		System.out.println(Arrays.toString(linearize(c)));
+		assertEquals("[-2147483648]", getConsoleOutput());
+
+		PinguLib.reset();
+
+	}
+
 
 }
